@@ -7,10 +7,11 @@ class CurrentDay extends Component {
         const city = this.props.city;
         const day = this.props.day;
         const w = day.weather[0];
-    
+        const index = this.props.index;
+    console.log(index)
 
     let today = new Date();
-    today.setDate(today.getDate() + day)
+    today.setDate(today.getDate()+ index)
     
     let weekday = new Array(7);
     weekday[0] =  "Sunday";
@@ -20,6 +21,8 @@ class CurrentDay extends Component {
     weekday[4] = "Thursday";
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
+
+    
     
     return (
     <div className="current-day">

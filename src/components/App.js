@@ -30,7 +30,7 @@ class App extends Component {
       <div className="App">
       <ZipForm onSubmit={this.onFormSubmit}/>
       <WeatherList days={this.state.dates} city={this.state.city} onDayClick={this.onDayClick}/>
-      {this.state.selectedDate !== null && <CurrentDay city={this.state.city} day={this.state.dates[this.state.selectedDate]}/>}
+      {this.state.selectedDate !== null && <CurrentDay city={this.state.city} day={this.state.dates[this.state.selectedDate]} index={this.state.selectedDate}/>}
       </div>
     );
   }
