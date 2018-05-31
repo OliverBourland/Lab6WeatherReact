@@ -5,10 +5,11 @@ import WeatherListItem from './WeatherListItem'
 class WeatherList extends Component {
     render () {
         const { days } = this.props;
-        const { city } = this.props;
+       // const { city } = this.props;
         return ( 
             <div className="weather-list flex-parent">
-                { days.map((day, index) => <WeatherListItem key={day.dt} day={day} index={index} />) }
+                { days.map((day, index) => <WeatherListItem key={day.dt} day={day} index={index}
+                onDayClick={this.props.onDayClick}/>) }
             </div>
         )
     }
